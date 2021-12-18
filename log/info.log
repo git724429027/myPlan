@@ -1,8 +1,0 @@
-2021-12-14 00:04:15 上午 [Thread: SpringContextShutdownHook][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.standby(QuartzScheduler.java:585) ]
-INFO:Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-2021-12-14 00:04:15 上午 [Thread: SpringContextShutdownHook][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.shutdown(QuartzScheduler.java:666) ]
-INFO:Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
-2021-12-14 00:04:15 上午 [Thread: SpringContextShutdownHook][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.standby(QuartzScheduler.java:585) ]
-INFO:Scheduler quartzScheduler_$_NON_CLUSTERED paused.
-2021-12-14 00:04:15 上午 [Thread: SpringContextShutdownHook][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.shutdown(QuartzScheduler.java:740) ]
-INFO:Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
