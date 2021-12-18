@@ -1,0 +1,117 @@
+2021-12-17 23:00:20 下午 [Thread: main][ Class:org.quartz.impl.StdSchedulerFactory >> Method: org.quartz.impl.StdSchedulerFactory.instantiate(StdSchedulerFactory.java:1220) ]
+INFO:Using default implementation for ThreadExecutor
+2021-12-17 23:00:20 下午 [Thread: main][ Class:org.quartz.core.SchedulerSignalerImpl >> Method: org.quartz.core.SchedulerSignalerImpl.<init>(SchedulerSignalerImpl.java:61) ]
+INFO:Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-12-17 23:00:20 下午 [Thread: main][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.<init>(QuartzScheduler.java:229) ]
+INFO:Quartz Scheduler v.2.3.2 created.
+2021-12-17 23:00:20 下午 [Thread: main][ Class:org.quartz.simpl.RAMJobStore >> Method: org.quartz.simpl.RAMJobStore.initialize(RAMJobStore.java:155) ]
+INFO:RAMJobStore initialized.
+2021-12-17 23:00:20 下午 [Thread: main][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.initialize(QuartzScheduler.java:294) ]
+INFO:Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-12-17 23:00:20 下午 [Thread: main][ Class:org.quartz.impl.StdSchedulerFactory >> Method: org.quartz.impl.StdSchedulerFactory.instantiate(StdSchedulerFactory.java:1374) ]
+INFO:Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-12-17 23:00:20 下午 [Thread: main][ Class:org.quartz.impl.StdSchedulerFactory >> Method: org.quartz.impl.StdSchedulerFactory.instantiate(StdSchedulerFactory.java:1378) ]
+INFO:Quartz scheduler version: 2.3.2
+2021-12-17 23:00:20 下午 [Thread: main][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.setJobFactory(QuartzScheduler.java:2293) ]
+INFO:JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@47ad69f7
+2021-12-17 23:00:21 下午 [Thread: main][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.start(QuartzScheduler.java:547) ]
+INFO:Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-12-17 23:00:21 下午 [Thread: quartzScheduler_QuartzSchedulerThread][ Class:org.quartz.core.QuartzSchedulerThread >> Method: org.quartz.core.QuartzSchedulerThread.run(QuartzSchedulerThread.java:291) ]
+DEBUG:batch acquisition of 0 triggers
+2021-12-17 23:00:21 下午 [Thread: SpringContextShutdownHook][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.standby(QuartzScheduler.java:585) ]
+INFO:Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-12-17 23:00:21 下午 [Thread: SpringContextShutdownHook][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.shutdown(QuartzScheduler.java:666) ]
+INFO:Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2021-12-17 23:00:21 下午 [Thread: SpringContextShutdownHook][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.standby(QuartzScheduler.java:585) ]
+INFO:Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-12-17 23:00:21 下午 [Thread: SpringContextShutdownHook][ Class:org.quartz.simpl.SimpleThreadPool >> Method: org.quartz.simpl.SimpleThreadPool.shutdown(SimpleThreadPool.java:328) ]
+DEBUG:Shutting down threadpool...
+2021-12-17 23:00:21 下午 [Thread: SpringContextShutdownHook][ Class:org.quartz.simpl.SimpleThreadPool >> Method: org.quartz.simpl.SimpleThreadPool.shutdown(SimpleThreadPool.java:395) ]
+DEBUG:Shutdown of threadpool complete.
+2021-12-17 23:00:21 下午 [Thread: SpringContextShutdownHook][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.shutdown(QuartzScheduler.java:740) ]
+INFO:Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2021-12-17 23:04:06 下午 [Thread: main][ Class:org.quartz.impl.StdSchedulerFactory >> Method: org.quartz.impl.StdSchedulerFactory.instantiate(StdSchedulerFactory.java:1220) ]
+INFO:Using default implementation for ThreadExecutor
+2021-12-17 23:04:06 下午 [Thread: main][ Class:org.quartz.core.SchedulerSignalerImpl >> Method: org.quartz.core.SchedulerSignalerImpl.<init>(SchedulerSignalerImpl.java:61) ]
+INFO:Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-12-17 23:04:06 下午 [Thread: main][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.<init>(QuartzScheduler.java:229) ]
+INFO:Quartz Scheduler v.2.3.2 created.
+2021-12-17 23:04:06 下午 [Thread: main][ Class:org.quartz.simpl.RAMJobStore >> Method: org.quartz.simpl.RAMJobStore.initialize(RAMJobStore.java:155) ]
+INFO:RAMJobStore initialized.
+2021-12-17 23:04:06 下午 [Thread: main][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.initialize(QuartzScheduler.java:294) ]
+INFO:Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-12-17 23:04:06 下午 [Thread: main][ Class:org.quartz.impl.StdSchedulerFactory >> Method: org.quartz.impl.StdSchedulerFactory.instantiate(StdSchedulerFactory.java:1374) ]
+INFO:Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-12-17 23:04:06 下午 [Thread: main][ Class:org.quartz.impl.StdSchedulerFactory >> Method: org.quartz.impl.StdSchedulerFactory.instantiate(StdSchedulerFactory.java:1378) ]
+INFO:Quartz scheduler version: 2.3.2
+2021-12-17 23:04:06 下午 [Thread: main][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.setJobFactory(QuartzScheduler.java:2293) ]
+INFO:JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@5e5073ab
+2021-12-17 23:04:07 下午 [Thread: main][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.start(QuartzScheduler.java:547) ]
+INFO:Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-12-17 23:04:07 下午 [Thread: quartzScheduler_QuartzSchedulerThread][ Class:org.quartz.core.QuartzSchedulerThread >> Method: org.quartz.core.QuartzSchedulerThread.run(QuartzSchedulerThread.java:291) ]
+DEBUG:batch acquisition of 0 triggers
+2021-12-17 23:04:07 下午 [Thread: SpringContextShutdownHook][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.standby(QuartzScheduler.java:585) ]
+INFO:Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-12-17 23:04:07 下午 [Thread: SpringContextShutdownHook][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.shutdown(QuartzScheduler.java:666) ]
+INFO:Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2021-12-17 23:04:07 下午 [Thread: SpringContextShutdownHook][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.standby(QuartzScheduler.java:585) ]
+INFO:Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-12-17 23:04:07 下午 [Thread: SpringContextShutdownHook][ Class:org.quartz.simpl.SimpleThreadPool >> Method: org.quartz.simpl.SimpleThreadPool.shutdown(SimpleThreadPool.java:328) ]
+DEBUG:Shutting down threadpool...
+2021-12-17 23:04:07 下午 [Thread: SpringContextShutdownHook][ Class:org.quartz.simpl.SimpleThreadPool >> Method: org.quartz.simpl.SimpleThreadPool.shutdown(SimpleThreadPool.java:395) ]
+DEBUG:Shutdown of threadpool complete.
+2021-12-17 23:04:07 下午 [Thread: SpringContextShutdownHook][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.shutdown(QuartzScheduler.java:740) ]
+INFO:Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2021-12-17 23:12:05 下午 [Thread: main][ Class:org.quartz.impl.StdSchedulerFactory >> Method: org.quartz.impl.StdSchedulerFactory.instantiate(StdSchedulerFactory.java:1220) ]
+INFO:Using default implementation for ThreadExecutor
+2021-12-17 23:12:05 下午 [Thread: main][ Class:org.quartz.core.SchedulerSignalerImpl >> Method: org.quartz.core.SchedulerSignalerImpl.<init>(SchedulerSignalerImpl.java:61) ]
+INFO:Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-12-17 23:12:05 下午 [Thread: main][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.<init>(QuartzScheduler.java:229) ]
+INFO:Quartz Scheduler v.2.3.2 created.
+2021-12-17 23:12:05 下午 [Thread: main][ Class:org.quartz.simpl.RAMJobStore >> Method: org.quartz.simpl.RAMJobStore.initialize(RAMJobStore.java:155) ]
+INFO:RAMJobStore initialized.
+2021-12-17 23:12:05 下午 [Thread: main][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.initialize(QuartzScheduler.java:294) ]
+INFO:Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-12-17 23:12:05 下午 [Thread: main][ Class:org.quartz.impl.StdSchedulerFactory >> Method: org.quartz.impl.StdSchedulerFactory.instantiate(StdSchedulerFactory.java:1374) ]
+INFO:Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-12-17 23:12:05 下午 [Thread: main][ Class:org.quartz.impl.StdSchedulerFactory >> Method: org.quartz.impl.StdSchedulerFactory.instantiate(StdSchedulerFactory.java:1378) ]
+INFO:Quartz scheduler version: 2.3.2
+2021-12-17 23:12:05 下午 [Thread: main][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.setJobFactory(QuartzScheduler.java:2293) ]
+INFO:JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@10c2064a
+2021-12-17 23:12:06 下午 [Thread: main][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.start(QuartzScheduler.java:547) ]
+INFO:Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-12-17 23:12:06 下午 [Thread: quartzScheduler_QuartzSchedulerThread][ Class:org.quartz.core.QuartzSchedulerThread >> Method: org.quartz.core.QuartzSchedulerThread.run(QuartzSchedulerThread.java:291) ]
+DEBUG:batch acquisition of 0 triggers
+2021-12-17 23:12:06 下午 [Thread: SpringContextShutdownHook][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.standby(QuartzScheduler.java:585) ]
+INFO:Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-12-17 23:12:06 下午 [Thread: SpringContextShutdownHook][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.shutdown(QuartzScheduler.java:666) ]
+INFO:Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2021-12-17 23:12:06 下午 [Thread: SpringContextShutdownHook][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.standby(QuartzScheduler.java:585) ]
+INFO:Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-12-17 23:12:06 下午 [Thread: SpringContextShutdownHook][ Class:org.quartz.simpl.SimpleThreadPool >> Method: org.quartz.simpl.SimpleThreadPool.shutdown(SimpleThreadPool.java:328) ]
+DEBUG:Shutting down threadpool...
+2021-12-17 23:12:06 下午 [Thread: SpringContextShutdownHook][ Class:org.quartz.simpl.SimpleThreadPool >> Method: org.quartz.simpl.SimpleThreadPool.shutdown(SimpleThreadPool.java:395) ]
+DEBUG:Shutdown of threadpool complete.
+2021-12-17 23:12:06 下午 [Thread: SpringContextShutdownHook][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.shutdown(QuartzScheduler.java:740) ]
+INFO:Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.

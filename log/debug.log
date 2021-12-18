@@ -1,0 +1,32 @@
+2021-12-14 00:00:06 上午 [Thread: quartzScheduler_QuartzSchedulerThread][ Class:org.quartz.core.QuartzSchedulerThread >> Method: org.quartz.core.QuartzSchedulerThread.run(QuartzSchedulerThread.java:291) ]
+DEBUG:batch acquisition of 0 triggers
+2021-12-14 00:00:33 上午 [Thread: quartzScheduler_QuartzSchedulerThread][ Class:org.quartz.core.QuartzSchedulerThread >> Method: org.quartz.core.QuartzSchedulerThread.run(QuartzSchedulerThread.java:291) ]
+DEBUG:batch acquisition of 0 triggers
+2021-12-14 00:00:59 上午 [Thread: quartzScheduler_QuartzSchedulerThread][ Class:org.quartz.core.QuartzSchedulerThread >> Method: org.quartz.core.QuartzSchedulerThread.run(QuartzSchedulerThread.java:291) ]
+DEBUG:batch acquisition of 0 triggers
+2021-12-14 00:01:27 上午 [Thread: quartzScheduler_QuartzSchedulerThread][ Class:org.quartz.core.QuartzSchedulerThread >> Method: org.quartz.core.QuartzSchedulerThread.run(QuartzSchedulerThread.java:291) ]
+DEBUG:batch acquisition of 0 triggers
+2021-12-14 00:01:53 上午 [Thread: quartzScheduler_QuartzSchedulerThread][ Class:org.quartz.core.QuartzSchedulerThread >> Method: org.quartz.core.QuartzSchedulerThread.run(QuartzSchedulerThread.java:291) ]
+DEBUG:batch acquisition of 0 triggers
+2021-12-14 00:02:17 上午 [Thread: quartzScheduler_QuartzSchedulerThread][ Class:org.quartz.core.QuartzSchedulerThread >> Method: org.quartz.core.QuartzSchedulerThread.run(QuartzSchedulerThread.java:291) ]
+DEBUG:batch acquisition of 0 triggers
+2021-12-14 00:02:44 上午 [Thread: quartzScheduler_QuartzSchedulerThread][ Class:org.quartz.core.QuartzSchedulerThread >> Method: org.quartz.core.QuartzSchedulerThread.run(QuartzSchedulerThread.java:291) ]
+DEBUG:batch acquisition of 0 triggers
+2021-12-14 00:03:10 上午 [Thread: quartzScheduler_QuartzSchedulerThread][ Class:org.quartz.core.QuartzSchedulerThread >> Method: org.quartz.core.QuartzSchedulerThread.run(QuartzSchedulerThread.java:291) ]
+DEBUG:batch acquisition of 0 triggers
+2021-12-14 00:03:34 上午 [Thread: quartzScheduler_QuartzSchedulerThread][ Class:org.quartz.core.QuartzSchedulerThread >> Method: org.quartz.core.QuartzSchedulerThread.run(QuartzSchedulerThread.java:291) ]
+DEBUG:batch acquisition of 0 triggers
+2021-12-14 00:04:04 上午 [Thread: quartzScheduler_QuartzSchedulerThread][ Class:org.quartz.core.QuartzSchedulerThread >> Method: org.quartz.core.QuartzSchedulerThread.run(QuartzSchedulerThread.java:291) ]
+DEBUG:batch acquisition of 0 triggers
+2021-12-14 00:04:15 上午 [Thread: SpringContextShutdownHook][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.standby(QuartzScheduler.java:585) ]
+INFO:Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-12-14 00:04:15 上午 [Thread: SpringContextShutdownHook][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.shutdown(QuartzScheduler.java:666) ]
+INFO:Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2021-12-14 00:04:15 上午 [Thread: SpringContextShutdownHook][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.standby(QuartzScheduler.java:585) ]
+INFO:Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-12-14 00:04:15 上午 [Thread: SpringContextShutdownHook][ Class:org.quartz.simpl.SimpleThreadPool >> Method: org.quartz.simpl.SimpleThreadPool.shutdown(SimpleThreadPool.java:328) ]
+DEBUG:Shutting down threadpool...
+2021-12-14 00:04:15 上午 [Thread: SpringContextShutdownHook][ Class:org.quartz.simpl.SimpleThreadPool >> Method: org.quartz.simpl.SimpleThreadPool.shutdown(SimpleThreadPool.java:395) ]
+DEBUG:Shutdown of threadpool complete.
+2021-12-14 00:04:15 上午 [Thread: SpringContextShutdownHook][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.shutdown(QuartzScheduler.java:740) ]
+INFO:Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
