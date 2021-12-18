@@ -1,0 +1,891 @@
+2021-12-13 21:31:10 下午 [Thread: main][ Class:org.apache.coyote.http11.Http11NioProtocol >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Initializing ProtocolHandler ["http-nio-8086"]
+2021-12-13 21:31:10 下午 [Thread: main][ Class:org.apache.catalina.core.StandardService >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Starting service [Tomcat]
+2021-12-13 21:31:10 下午 [Thread: main][ Class:org.apache.catalina.core.StandardEngine >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Starting Servlet engine: [Apache Tomcat/9.0.39]
+2021-12-13 21:31:10 下午 [Thread: main][ Class:org.apache.catalina.core.AprLifecycleListener >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Loaded Apache Tomcat Native library [1.2.25] using APR version [1.7.0].
+2021-12-13 21:31:10 下午 [Thread: main][ Class:org.apache.catalina.core.AprLifecycleListener >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2021-12-13 21:31:10 下午 [Thread: main][ Class:org.apache.catalina.core.AprLifecycleListener >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021-12-13 21:31:10 下午 [Thread: main][ Class:org.apache.catalina.core.AprLifecycleListener >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+2021-12-13 21:31:10 下午 [Thread: main][ Class:org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Initializing Spring embedded WebApplicationContext
+2021-12-13 21:31:10 下午 [Thread: main][ Class:org.quartz.impl.StdSchedulerFactory >> Method: org.quartz.impl.StdSchedulerFactory.instantiate(StdSchedulerFactory.java:1220) ]
+INFO:Using default implementation for ThreadExecutor
+2021-12-13 21:31:10 下午 [Thread: main][ Class:org.quartz.core.SchedulerSignalerImpl >> Method: org.quartz.core.SchedulerSignalerImpl.<init>(SchedulerSignalerImpl.java:61) ]
+INFO:Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-12-13 21:31:10 下午 [Thread: main][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.<init>(QuartzScheduler.java:229) ]
+INFO:Quartz Scheduler v.2.3.2 created.
+2021-12-13 21:31:10 下午 [Thread: main][ Class:org.quartz.simpl.RAMJobStore >> Method: org.quartz.simpl.RAMJobStore.initialize(RAMJobStore.java:155) ]
+INFO:RAMJobStore initialized.
+2021-12-13 21:31:10 下午 [Thread: main][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.initialize(QuartzScheduler.java:294) ]
+INFO:Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-12-13 21:31:10 下午 [Thread: main][ Class:org.quartz.impl.StdSchedulerFactory >> Method: org.quartz.impl.StdSchedulerFactory.instantiate(StdSchedulerFactory.java:1374) ]
+INFO:Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-12-13 21:31:10 下午 [Thread: main][ Class:org.quartz.impl.StdSchedulerFactory >> Method: org.quartz.impl.StdSchedulerFactory.instantiate(StdSchedulerFactory.java:1378) ]
+INFO:Quartz scheduler version: 2.3.2
+2021-12-13 21:31:10 下午 [Thread: main][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.setJobFactory(QuartzScheduler.java:2293) ]
+INFO:JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@5cf8676a
+2021-12-13 21:31:11 下午 [Thread: main][ Class:org.apache.coyote.http11.Http11NioProtocol >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Starting ProtocolHandler ["http-nio-8086"]
+2021-12-13 21:31:11 下午 [Thread: main][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.start(QuartzScheduler.java:547) ]
+INFO:Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-12-13 21:31:19 下午 [Thread: quartzScheduler_Worker-1][ Class:org.quartz.core.JobRunShell >> Method: org.quartz.core.JobRunShell.run(JobRunShell.java:211) ]
+ERROR:Job DEFAULT.MyTask threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.wang.utils.HttpClientUtil.doPost(HttpClientUtil.java:93)
+	at com.wang.pojo.MyTask.executeInternal(MyTask.java:20)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2021-12-13 21:31:19 下午 [Thread: quartzScheduler_Worker-1][ Class:org.quartz.core.ErrorLogger >> Method: org.quartz.core.ErrorLogger.schedulerError(QuartzScheduler.java:2407) ]
+ERROR:Job (DEFAULT.MyTask threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.wang.utils.HttpClientUtil.doPost(HttpClientUtil.java:93)
+	at com.wang.pojo.MyTask.executeInternal(MyTask.java:20)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2021-12-13 21:31:23 下午 [Thread: quartzScheduler_Worker-2][ Class:org.quartz.core.JobRunShell >> Method: org.quartz.core.JobRunShell.run(JobRunShell.java:211) ]
+ERROR:Job DEFAULT.MyTask threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.wang.utils.HttpClientUtil.doPost(HttpClientUtil.java:93)
+	at com.wang.pojo.MyTask.executeInternal(MyTask.java:20)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2021-12-13 21:31:23 下午 [Thread: quartzScheduler_Worker-2][ Class:org.quartz.core.ErrorLogger >> Method: org.quartz.core.ErrorLogger.schedulerError(QuartzScheduler.java:2407) ]
+ERROR:Job (DEFAULT.MyTask threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.wang.utils.HttpClientUtil.doPost(HttpClientUtil.java:93)
+	at com.wang.pojo.MyTask.executeInternal(MyTask.java:20)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2021-12-13 21:31:28 下午 [Thread: quartzScheduler_Worker-3][ Class:org.quartz.core.JobRunShell >> Method: org.quartz.core.JobRunShell.run(JobRunShell.java:211) ]
+ERROR:Job DEFAULT.MyTask threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.wang.utils.HttpClientUtil.doPost(HttpClientUtil.java:93)
+	at com.wang.pojo.MyTask.executeInternal(MyTask.java:20)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2021-12-13 21:31:28 下午 [Thread: quartzScheduler_Worker-3][ Class:org.quartz.core.ErrorLogger >> Method: org.quartz.core.ErrorLogger.schedulerError(QuartzScheduler.java:2407) ]
+ERROR:Job (DEFAULT.MyTask threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.wang.utils.HttpClientUtil.doPost(HttpClientUtil.java:93)
+	at com.wang.pojo.MyTask.executeInternal(MyTask.java:20)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2021-12-13 21:31:33 下午 [Thread: quartzScheduler_Worker-4][ Class:org.quartz.core.JobRunShell >> Method: org.quartz.core.JobRunShell.run(JobRunShell.java:211) ]
+ERROR:Job DEFAULT.MyTask threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.wang.utils.HttpClientUtil.doPost(HttpClientUtil.java:93)
+	at com.wang.pojo.MyTask.executeInternal(MyTask.java:20)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2021-12-13 21:31:33 下午 [Thread: quartzScheduler_Worker-4][ Class:org.quartz.core.ErrorLogger >> Method: org.quartz.core.ErrorLogger.schedulerError(QuartzScheduler.java:2407) ]
+ERROR:Job (DEFAULT.MyTask threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.wang.utils.HttpClientUtil.doPost(HttpClientUtil.java:93)
+	at com.wang.pojo.MyTask.executeInternal(MyTask.java:20)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2021-12-13 21:31:38 下午 [Thread: quartzScheduler_Worker-5][ Class:org.quartz.core.JobRunShell >> Method: org.quartz.core.JobRunShell.run(JobRunShell.java:211) ]
+ERROR:Job DEFAULT.MyTask threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.wang.utils.HttpClientUtil.doPost(HttpClientUtil.java:93)
+	at com.wang.pojo.MyTask.executeInternal(MyTask.java:20)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2021-12-13 21:31:38 下午 [Thread: quartzScheduler_Worker-5][ Class:org.quartz.core.ErrorLogger >> Method: org.quartz.core.ErrorLogger.schedulerError(QuartzScheduler.java:2407) ]
+ERROR:Job (DEFAULT.MyTask threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.wang.utils.HttpClientUtil.doPost(HttpClientUtil.java:93)
+	at com.wang.pojo.MyTask.executeInternal(MyTask.java:20)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2021-12-13 21:31:43 下午 [Thread: quartzScheduler_Worker-6][ Class:org.quartz.core.JobRunShell >> Method: org.quartz.core.JobRunShell.run(JobRunShell.java:211) ]
+ERROR:Job DEFAULT.MyTask threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.wang.utils.HttpClientUtil.doPost(HttpClientUtil.java:93)
+	at com.wang.pojo.MyTask.executeInternal(MyTask.java:20)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2021-12-13 21:31:43 下午 [Thread: quartzScheduler_Worker-6][ Class:org.quartz.core.ErrorLogger >> Method: org.quartz.core.ErrorLogger.schedulerError(QuartzScheduler.java:2407) ]
+ERROR:Job (DEFAULT.MyTask threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.wang.utils.HttpClientUtil.doPost(HttpClientUtil.java:93)
+	at com.wang.pojo.MyTask.executeInternal(MyTask.java:20)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2021-12-13 21:31:48 下午 [Thread: quartzScheduler_Worker-7][ Class:org.quartz.core.JobRunShell >> Method: org.quartz.core.JobRunShell.run(JobRunShell.java:211) ]
+ERROR:Job DEFAULT.MyTask threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.wang.utils.HttpClientUtil.doPost(HttpClientUtil.java:93)
+	at com.wang.pojo.MyTask.executeInternal(MyTask.java:20)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2021-12-13 21:31:48 下午 [Thread: quartzScheduler_Worker-7][ Class:org.quartz.core.ErrorLogger >> Method: org.quartz.core.ErrorLogger.schedulerError(QuartzScheduler.java:2407) ]
+ERROR:Job (DEFAULT.MyTask threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.wang.utils.HttpClientUtil.doPost(HttpClientUtil.java:93)
+	at com.wang.pojo.MyTask.executeInternal(MyTask.java:20)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2021-12-13 21:31:53 下午 [Thread: quartzScheduler_Worker-8][ Class:org.quartz.core.JobRunShell >> Method: org.quartz.core.JobRunShell.run(JobRunShell.java:211) ]
+ERROR:Job DEFAULT.MyTask threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.wang.utils.HttpClientUtil.doPost(HttpClientUtil.java:93)
+	at com.wang.pojo.MyTask.executeInternal(MyTask.java:20)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2021-12-13 21:31:53 下午 [Thread: quartzScheduler_Worker-8][ Class:org.quartz.core.ErrorLogger >> Method: org.quartz.core.ErrorLogger.schedulerError(QuartzScheduler.java:2407) ]
+ERROR:Job (DEFAULT.MyTask threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.wang.utils.HttpClientUtil.doPost(HttpClientUtil.java:93)
+	at com.wang.pojo.MyTask.executeInternal(MyTask.java:20)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2021-12-13 21:31:58 下午 [Thread: quartzScheduler_Worker-9][ Class:org.quartz.core.JobRunShell >> Method: org.quartz.core.JobRunShell.run(JobRunShell.java:211) ]
+ERROR:Job DEFAULT.MyTask threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.wang.utils.HttpClientUtil.doPost(HttpClientUtil.java:93)
+	at com.wang.pojo.MyTask.executeInternal(MyTask.java:20)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2021-12-13 21:31:58 下午 [Thread: quartzScheduler_Worker-9][ Class:org.quartz.core.ErrorLogger >> Method: org.quartz.core.ErrorLogger.schedulerError(QuartzScheduler.java:2407) ]
+ERROR:Job (DEFAULT.MyTask threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.wang.utils.HttpClientUtil.doPost(HttpClientUtil.java:93)
+	at com.wang.pojo.MyTask.executeInternal(MyTask.java:20)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2021-12-13 21:32:03 下午 [Thread: quartzScheduler_Worker-10][ Class:org.quartz.core.JobRunShell >> Method: org.quartz.core.JobRunShell.run(JobRunShell.java:211) ]
+ERROR:Job DEFAULT.MyTask threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.wang.utils.HttpClientUtil.doPost(HttpClientUtil.java:93)
+	at com.wang.pojo.MyTask.executeInternal(MyTask.java:20)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2021-12-13 21:32:03 下午 [Thread: quartzScheduler_Worker-10][ Class:org.quartz.core.ErrorLogger >> Method: org.quartz.core.ErrorLogger.schedulerError(QuartzScheduler.java:2407) ]
+ERROR:Job (DEFAULT.MyTask threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.wang.utils.HttpClientUtil.doPost(HttpClientUtil.java:93)
+	at com.wang.pojo.MyTask.executeInternal(MyTask.java:20)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2021-12-13 21:32:08 下午 [Thread: quartzScheduler_Worker-1][ Class:org.quartz.core.JobRunShell >> Method: org.quartz.core.JobRunShell.run(JobRunShell.java:211) ]
+ERROR:Job DEFAULT.MyTask threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.wang.utils.HttpClientUtil.doPost(HttpClientUtil.java:93)
+	at com.wang.pojo.MyTask.executeInternal(MyTask.java:20)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2021-12-13 21:32:08 下午 [Thread: quartzScheduler_Worker-1][ Class:org.quartz.core.ErrorLogger >> Method: org.quartz.core.ErrorLogger.schedulerError(QuartzScheduler.java:2407) ]
+ERROR:Job (DEFAULT.MyTask threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.wang.utils.HttpClientUtil.doPost(HttpClientUtil.java:93)
+	at com.wang.pojo.MyTask.executeInternal(MyTask.java:20)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2021-12-13 21:32:13 下午 [Thread: quartzScheduler_Worker-2][ Class:org.quartz.core.JobRunShell >> Method: org.quartz.core.JobRunShell.run(JobRunShell.java:211) ]
+ERROR:Job DEFAULT.MyTask threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.wang.utils.HttpClientUtil.doPost(HttpClientUtil.java:93)
+	at com.wang.pojo.MyTask.executeInternal(MyTask.java:20)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2021-12-13 21:32:13 下午 [Thread: quartzScheduler_Worker-2][ Class:org.quartz.core.ErrorLogger >> Method: org.quartz.core.ErrorLogger.schedulerError(QuartzScheduler.java:2407) ]
+ERROR:Job (DEFAULT.MyTask threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.wang.utils.HttpClientUtil.doPost(HttpClientUtil.java:93)
+	at com.wang.pojo.MyTask.executeInternal(MyTask.java:20)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2021-12-13 21:32:18 下午 [Thread: quartzScheduler_Worker-3][ Class:org.quartz.core.JobRunShell >> Method: org.quartz.core.JobRunShell.run(JobRunShell.java:211) ]
+ERROR:Job DEFAULT.MyTask threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.wang.utils.HttpClientUtil.doPost(HttpClientUtil.java:93)
+	at com.wang.pojo.MyTask.executeInternal(MyTask.java:20)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2021-12-13 21:32:18 下午 [Thread: quartzScheduler_Worker-3][ Class:org.quartz.core.ErrorLogger >> Method: org.quartz.core.ErrorLogger.schedulerError(QuartzScheduler.java:2407) ]
+ERROR:Job (DEFAULT.MyTask threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.wang.utils.HttpClientUtil.doPost(HttpClientUtil.java:93)
+	at com.wang.pojo.MyTask.executeInternal(MyTask.java:20)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2021-12-13 21:32:23 下午 [Thread: quartzScheduler_Worker-4][ Class:org.quartz.core.JobRunShell >> Method: org.quartz.core.JobRunShell.run(JobRunShell.java:211) ]
+ERROR:Job DEFAULT.MyTask threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.wang.utils.HttpClientUtil.doPost(HttpClientUtil.java:93)
+	at com.wang.pojo.MyTask.executeInternal(MyTask.java:20)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2021-12-13 21:32:23 下午 [Thread: quartzScheduler_Worker-4][ Class:org.quartz.core.ErrorLogger >> Method: org.quartz.core.ErrorLogger.schedulerError(QuartzScheduler.java:2407) ]
+ERROR:Job (DEFAULT.MyTask threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.wang.utils.HttpClientUtil.doPost(HttpClientUtil.java:93)
+	at com.wang.pojo.MyTask.executeInternal(MyTask.java:20)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2021-12-13 21:32:28 下午 [Thread: quartzScheduler_Worker-5][ Class:org.quartz.core.JobRunShell >> Method: org.quartz.core.JobRunShell.run(JobRunShell.java:211) ]
+ERROR:Job DEFAULT.MyTask threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.wang.utils.HttpClientUtil.doPost(HttpClientUtil.java:93)
+	at com.wang.pojo.MyTask.executeInternal(MyTask.java:20)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2021-12-13 21:32:28 下午 [Thread: quartzScheduler_Worker-5][ Class:org.quartz.core.ErrorLogger >> Method: org.quartz.core.ErrorLogger.schedulerError(QuartzScheduler.java:2407) ]
+ERROR:Job (DEFAULT.MyTask threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.wang.utils.HttpClientUtil.doPost(HttpClientUtil.java:93)
+	at com.wang.pojo.MyTask.executeInternal(MyTask.java:20)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2021-12-13 21:32:33 下午 [Thread: quartzScheduler_Worker-6][ Class:org.quartz.core.JobRunShell >> Method: org.quartz.core.JobRunShell.run(JobRunShell.java:211) ]
+ERROR:Job DEFAULT.MyTask threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.wang.utils.HttpClientUtil.doPost(HttpClientUtil.java:93)
+	at com.wang.pojo.MyTask.executeInternal(MyTask.java:20)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2021-12-13 21:32:33 下午 [Thread: quartzScheduler_Worker-6][ Class:org.quartz.core.ErrorLogger >> Method: org.quartz.core.ErrorLogger.schedulerError(QuartzScheduler.java:2407) ]
+ERROR:Job (DEFAULT.MyTask threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.wang.utils.HttpClientUtil.doPost(HttpClientUtil.java:93)
+	at com.wang.pojo.MyTask.executeInternal(MyTask.java:20)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2021-12-13 21:32:38 下午 [Thread: quartzScheduler_Worker-7][ Class:org.quartz.core.JobRunShell >> Method: org.quartz.core.JobRunShell.run(JobRunShell.java:211) ]
+ERROR:Job DEFAULT.MyTask threw an unhandled Exception: 
+java.lang.NullPointerException
+	at com.wang.utils.HttpClientUtil.doPost(HttpClientUtil.java:93)
+	at com.wang.pojo.MyTask.executeInternal(MyTask.java:20)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+2021-12-13 21:32:38 下午 [Thread: quartzScheduler_Worker-7][ Class:org.quartz.core.ErrorLogger >> Method: org.quartz.core.ErrorLogger.schedulerError(QuartzScheduler.java:2407) ]
+ERROR:Job (DEFAULT.MyTask threw an exception.
+org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:573)
+Caused by: java.lang.NullPointerException
+	at com.wang.utils.HttpClientUtil.doPost(HttpClientUtil.java:93)
+	at com.wang.pojo.MyTask.executeInternal(MyTask.java:20)
+	at org.springframework.scheduling.quartz.QuartzJobBean.execute(QuartzJobBean.java:75)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:202)
+	... 1 more
+2021-12-13 21:32:42 下午 [Thread: SpringContextShutdownHook][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.standby(QuartzScheduler.java:585) ]
+INFO:Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-12-13 21:32:42 下午 [Thread: SpringContextShutdownHook][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.shutdown(QuartzScheduler.java:666) ]
+INFO:Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2021-12-13 21:32:42 下午 [Thread: SpringContextShutdownHook][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.standby(QuartzScheduler.java:585) ]
+INFO:Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-12-13 21:32:42 下午 [Thread: SpringContextShutdownHook][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.shutdown(QuartzScheduler.java:740) ]
+INFO:Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2021-12-13 21:32:47 下午 [Thread: main][ Class:org.apache.coyote.http11.Http11NioProtocol >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Initializing ProtocolHandler ["http-nio-8086"]
+2021-12-13 21:32:47 下午 [Thread: main][ Class:org.apache.catalina.core.StandardService >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Starting service [Tomcat]
+2021-12-13 21:32:47 下午 [Thread: main][ Class:org.apache.catalina.core.StandardEngine >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Starting Servlet engine: [Apache Tomcat/9.0.39]
+2021-12-13 21:32:47 下午 [Thread: main][ Class:org.apache.catalina.core.AprLifecycleListener >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Loaded Apache Tomcat Native library [1.2.25] using APR version [1.7.0].
+2021-12-13 21:32:47 下午 [Thread: main][ Class:org.apache.catalina.core.AprLifecycleListener >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2021-12-13 21:32:47 下午 [Thread: main][ Class:org.apache.catalina.core.AprLifecycleListener >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021-12-13 21:32:47 下午 [Thread: main][ Class:org.apache.catalina.core.AprLifecycleListener >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+2021-12-13 21:32:47 下午 [Thread: main][ Class:org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Initializing Spring embedded WebApplicationContext
+2021-12-13 21:32:47 下午 [Thread: main][ Class:org.quartz.impl.StdSchedulerFactory >> Method: org.quartz.impl.StdSchedulerFactory.instantiate(StdSchedulerFactory.java:1220) ]
+INFO:Using default implementation for ThreadExecutor
+2021-12-13 21:32:47 下午 [Thread: main][ Class:org.quartz.core.SchedulerSignalerImpl >> Method: org.quartz.core.SchedulerSignalerImpl.<init>(SchedulerSignalerImpl.java:61) ]
+INFO:Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-12-13 21:32:47 下午 [Thread: main][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.<init>(QuartzScheduler.java:229) ]
+INFO:Quartz Scheduler v.2.3.2 created.
+2021-12-13 21:32:47 下午 [Thread: main][ Class:org.quartz.simpl.RAMJobStore >> Method: org.quartz.simpl.RAMJobStore.initialize(RAMJobStore.java:155) ]
+INFO:RAMJobStore initialized.
+2021-12-13 21:32:47 下午 [Thread: main][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.initialize(QuartzScheduler.java:294) ]
+INFO:Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-12-13 21:32:47 下午 [Thread: main][ Class:org.quartz.impl.StdSchedulerFactory >> Method: org.quartz.impl.StdSchedulerFactory.instantiate(StdSchedulerFactory.java:1374) ]
+INFO:Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-12-13 21:32:47 下午 [Thread: main][ Class:org.quartz.impl.StdSchedulerFactory >> Method: org.quartz.impl.StdSchedulerFactory.instantiate(StdSchedulerFactory.java:1378) ]
+INFO:Quartz scheduler version: 2.3.2
+2021-12-13 21:32:47 下午 [Thread: main][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.setJobFactory(QuartzScheduler.java:2293) ]
+INFO:JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@71cea1b8
+2021-12-13 21:32:48 下午 [Thread: main][ Class:org.apache.coyote.http11.Http11NioProtocol >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Starting ProtocolHandler ["http-nio-8086"]
+2021-12-13 21:32:48 下午 [Thread: main][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.start(QuartzScheduler.java:547) ]
+INFO:Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-12-13 21:33:46 下午 [Thread: http-nio-8086-exec-2][ Class:org.apache.tomcat.util.http.parser.Cookie >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:A cookie header was received [1619257388] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2021-12-13 21:33:46 下午 [Thread: http-nio-8086-exec-2][ Class:org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-12-13 21:33:46 下午 [Thread: http-nio-8086-exec-2][ Class:com.wang.controller.download.DownloadController >> Method: com.wang.controller.download.DownloadController.download(DownloadController.java:34) ]
+INFO:文件路径：resource/file/jdbc.docx
+2021-12-13 21:33:46 下午 [Thread: http-nio-8086-exec-2][ Class:com.wang.controller.download.DownloadController >> Method: com.wang.controller.download.DownloadController.download(DownloadController.java:35) ]
+INFO:文件名称：jdbc.docx
+2021-12-13 21:33:46 下午 [Thread: http-nio-8086-exec-2][ Class:com.wang.controller.download.DownloadController >> Method: com.wang.controller.download.DownloadController.download(DownloadController.java:36) ]
+INFO:文件描述：class path resource [resource/file/jdbc.docx]
+2021-12-13 21:33:46 下午 [Thread: http-nio-8086-exec-2][ Class:com.wang.controller.download.DownloadController >> Method: com.wang.controller.download.DownloadController.download(DownloadController.java:37) ]
+INFO:D:\Code\ideaCode\MyPlan\Aop\target\classes\resource\file\jdbc.docx
+2021-12-13 21:33:46 下午 [Thread: http-nio-8086-exec-2][ Class:com.wang.controller.download.DownloadController >> Method: com.wang.controller.download.DownloadController.download(DownloadController.java:42) ]
+INFO:文件后缀名：docx
+2021-12-13 21:36:53 下午 [Thread: SpringContextShutdownHook][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.standby(QuartzScheduler.java:585) ]
+INFO:Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-12-13 21:36:53 下午 [Thread: SpringContextShutdownHook][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.shutdown(QuartzScheduler.java:666) ]
+INFO:Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2021-12-13 21:36:53 下午 [Thread: SpringContextShutdownHook][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.standby(QuartzScheduler.java:585) ]
+INFO:Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-12-13 21:36:53 下午 [Thread: SpringContextShutdownHook][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.shutdown(QuartzScheduler.java:740) ]
+INFO:Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2021-12-13 21:41:48 下午 [Thread: main][ Class:org.apache.coyote.http11.Http11NioProtocol >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Initializing ProtocolHandler ["http-nio-8086"]
+2021-12-13 21:41:48 下午 [Thread: main][ Class:org.apache.catalina.core.StandardService >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Starting service [Tomcat]
+2021-12-13 21:41:48 下午 [Thread: main][ Class:org.apache.catalina.core.StandardEngine >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Starting Servlet engine: [Apache Tomcat/9.0.39]
+2021-12-13 21:41:48 下午 [Thread: main][ Class:org.apache.catalina.core.AprLifecycleListener >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Loaded Apache Tomcat Native library [1.2.25] using APR version [1.7.0].
+2021-12-13 21:41:48 下午 [Thread: main][ Class:org.apache.catalina.core.AprLifecycleListener >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2021-12-13 21:41:48 下午 [Thread: main][ Class:org.apache.catalina.core.AprLifecycleListener >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021-12-13 21:41:48 下午 [Thread: main][ Class:org.apache.catalina.core.AprLifecycleListener >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+2021-12-13 21:41:48 下午 [Thread: main][ Class:org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Initializing Spring embedded WebApplicationContext
+2021-12-13 21:41:49 下午 [Thread: main][ Class:org.quartz.impl.StdSchedulerFactory >> Method: org.quartz.impl.StdSchedulerFactory.instantiate(StdSchedulerFactory.java:1220) ]
+INFO:Using default implementation for ThreadExecutor
+2021-12-13 21:41:49 下午 [Thread: main][ Class:org.quartz.core.SchedulerSignalerImpl >> Method: org.quartz.core.SchedulerSignalerImpl.<init>(SchedulerSignalerImpl.java:61) ]
+INFO:Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-12-13 21:41:49 下午 [Thread: main][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.<init>(QuartzScheduler.java:229) ]
+INFO:Quartz Scheduler v.2.3.2 created.
+2021-12-13 21:41:49 下午 [Thread: main][ Class:org.quartz.simpl.RAMJobStore >> Method: org.quartz.simpl.RAMJobStore.initialize(RAMJobStore.java:155) ]
+INFO:RAMJobStore initialized.
+2021-12-13 21:41:49 下午 [Thread: main][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.initialize(QuartzScheduler.java:294) ]
+INFO:Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-12-13 21:41:49 下午 [Thread: main][ Class:org.quartz.impl.StdSchedulerFactory >> Method: org.quartz.impl.StdSchedulerFactory.instantiate(StdSchedulerFactory.java:1374) ]
+INFO:Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-12-13 21:41:49 下午 [Thread: main][ Class:org.quartz.impl.StdSchedulerFactory >> Method: org.quartz.impl.StdSchedulerFactory.instantiate(StdSchedulerFactory.java:1378) ]
+INFO:Quartz scheduler version: 2.3.2
+2021-12-13 21:41:49 下午 [Thread: main][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.setJobFactory(QuartzScheduler.java:2293) ]
+INFO:JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@2abbd0d9
+2021-12-13 21:41:49 下午 [Thread: main][ Class:org.apache.coyote.http11.Http11NioProtocol >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Starting ProtocolHandler ["http-nio-8086"]
+2021-12-13 21:41:49 下午 [Thread: main][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.start(QuartzScheduler.java:547) ]
+INFO:Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-12-13 21:42:52 下午 [Thread: http-nio-8086-exec-3][ Class:org.apache.tomcat.util.http.parser.Cookie >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:A cookie header was received [1619257388] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2021-12-13 21:42:52 下午 [Thread: http-nio-8086-exec-3][ Class:org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-12-13 21:42:53 下午 [Thread: http-nio-8086-exec-3][ Class:com.wang.controller.download.DownloadController >> Method: com.wang.controller.download.DownloadController.download(DownloadController.java:34) ]
+INFO:文件路径：resource/file/jdbc.docx
+2021-12-13 21:42:53 下午 [Thread: http-nio-8086-exec-3][ Class:com.wang.controller.download.DownloadController >> Method: com.wang.controller.download.DownloadController.download(DownloadController.java:35) ]
+INFO:文件名称：jdbc.docx
+2021-12-13 21:42:53 下午 [Thread: http-nio-8086-exec-3][ Class:com.wang.controller.download.DownloadController >> Method: com.wang.controller.download.DownloadController.download(DownloadController.java:36) ]
+INFO:文件描述：class path resource [resource/file/jdbc.docx]
+2021-12-13 21:42:53 下午 [Thread: http-nio-8086-exec-3][ Class:com.wang.controller.download.DownloadController >> Method: com.wang.controller.download.DownloadController.download(DownloadController.java:37) ]
+INFO:D:\Code\ideaCode\MyPlan\Aop\target\classes\resource\file\jdbc.docx
+2021-12-13 21:42:53 下午 [Thread: http-nio-8086-exec-3][ Class:com.wang.controller.download.DownloadController >> Method: com.wang.controller.download.DownloadController.download(DownloadController.java:42) ]
+INFO:文件后缀名：docx
+2021-12-13 22:10:57 下午 [Thread: SpringContextShutdownHook][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.standby(QuartzScheduler.java:585) ]
+INFO:Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-12-13 22:10:58 下午 [Thread: SpringContextShutdownHook][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.shutdown(QuartzScheduler.java:666) ]
+INFO:Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2021-12-13 22:10:58 下午 [Thread: SpringContextShutdownHook][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.standby(QuartzScheduler.java:585) ]
+INFO:Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-12-13 22:10:58 下午 [Thread: SpringContextShutdownHook][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.shutdown(QuartzScheduler.java:740) ]
+INFO:Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2021-12-13 22:59:27 下午 [Thread: main][ Class:org.apache.coyote.http11.Http11NioProtocol >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Initializing ProtocolHandler ["http-nio-8086"]
+2021-12-13 22:59:27 下午 [Thread: main][ Class:org.apache.catalina.core.StandardService >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Starting service [Tomcat]
+2021-12-13 22:59:27 下午 [Thread: main][ Class:org.apache.catalina.core.StandardEngine >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Starting Servlet engine: [Apache Tomcat/9.0.39]
+2021-12-13 22:59:27 下午 [Thread: main][ Class:org.apache.catalina.core.AprLifecycleListener >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Loaded Apache Tomcat Native library [1.2.25] using APR version [1.7.0].
+2021-12-13 22:59:27 下午 [Thread: main][ Class:org.apache.catalina.core.AprLifecycleListener >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2021-12-13 22:59:27 下午 [Thread: main][ Class:org.apache.catalina.core.AprLifecycleListener >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021-12-13 22:59:27 下午 [Thread: main][ Class:org.apache.catalina.core.AprLifecycleListener >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+2021-12-13 22:59:27 下午 [Thread: main][ Class:org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Initializing Spring embedded WebApplicationContext
+2021-12-13 22:59:27 下午 [Thread: main][ Class:org.quartz.impl.StdSchedulerFactory >> Method: org.quartz.impl.StdSchedulerFactory.instantiate(StdSchedulerFactory.java:1220) ]
+INFO:Using default implementation for ThreadExecutor
+2021-12-13 22:59:27 下午 [Thread: main][ Class:org.quartz.core.SchedulerSignalerImpl >> Method: org.quartz.core.SchedulerSignalerImpl.<init>(SchedulerSignalerImpl.java:61) ]
+INFO:Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-12-13 22:59:27 下午 [Thread: main][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.<init>(QuartzScheduler.java:229) ]
+INFO:Quartz Scheduler v.2.3.2 created.
+2021-12-13 22:59:27 下午 [Thread: main][ Class:org.quartz.simpl.RAMJobStore >> Method: org.quartz.simpl.RAMJobStore.initialize(RAMJobStore.java:155) ]
+INFO:RAMJobStore initialized.
+2021-12-13 22:59:27 下午 [Thread: main][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.initialize(QuartzScheduler.java:294) ]
+INFO:Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-12-13 22:59:27 下午 [Thread: main][ Class:org.quartz.impl.StdSchedulerFactory >> Method: org.quartz.impl.StdSchedulerFactory.instantiate(StdSchedulerFactory.java:1374) ]
+INFO:Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-12-13 22:59:27 下午 [Thread: main][ Class:org.quartz.impl.StdSchedulerFactory >> Method: org.quartz.impl.StdSchedulerFactory.instantiate(StdSchedulerFactory.java:1378) ]
+INFO:Quartz scheduler version: 2.3.2
+2021-12-13 22:59:27 下午 [Thread: main][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.setJobFactory(QuartzScheduler.java:2293) ]
+INFO:JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@328902d5
+2021-12-13 22:59:27 下午 [Thread: main][ Class:org.apache.coyote.http11.Http11NioProtocol >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Starting ProtocolHandler ["http-nio-8086"]
+2021-12-13 22:59:28 下午 [Thread: main][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.start(QuartzScheduler.java:547) ]
+INFO:Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-12-13 22:59:33 下午 [Thread: main][ Class:org.apache.coyote.http11.Http11NioProtocol >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Initializing ProtocolHandler ["http-nio-8086"]
+2021-12-13 22:59:33 下午 [Thread: main][ Class:org.apache.catalina.core.StandardService >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Starting service [Tomcat]
+2021-12-13 22:59:33 下午 [Thread: main][ Class:org.apache.catalina.core.StandardEngine >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Starting Servlet engine: [Apache Tomcat/9.0.39]
+2021-12-13 22:59:33 下午 [Thread: main][ Class:org.apache.catalina.core.AprLifecycleListener >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Loaded Apache Tomcat Native library [1.2.25] using APR version [1.7.0].
+2021-12-13 22:59:33 下午 [Thread: main][ Class:org.apache.catalina.core.AprLifecycleListener >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2021-12-13 22:59:33 下午 [Thread: main][ Class:org.apache.catalina.core.AprLifecycleListener >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021-12-13 22:59:33 下午 [Thread: main][ Class:org.apache.catalina.core.AprLifecycleListener >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+2021-12-13 22:59:33 下午 [Thread: main][ Class:org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Initializing Spring embedded WebApplicationContext
+2021-12-13 22:59:33 下午 [Thread: main][ Class:org.quartz.impl.StdSchedulerFactory >> Method: org.quartz.impl.StdSchedulerFactory.instantiate(StdSchedulerFactory.java:1220) ]
+INFO:Using default implementation for ThreadExecutor
+2021-12-13 22:59:33 下午 [Thread: main][ Class:org.quartz.core.SchedulerSignalerImpl >> Method: org.quartz.core.SchedulerSignalerImpl.<init>(SchedulerSignalerImpl.java:61) ]
+INFO:Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-12-13 22:59:33 下午 [Thread: main][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.<init>(QuartzScheduler.java:229) ]
+INFO:Quartz Scheduler v.2.3.2 created.
+2021-12-13 22:59:33 下午 [Thread: main][ Class:org.quartz.simpl.RAMJobStore >> Method: org.quartz.simpl.RAMJobStore.initialize(RAMJobStore.java:155) ]
+INFO:RAMJobStore initialized.
+2021-12-13 22:59:33 下午 [Thread: main][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.initialize(QuartzScheduler.java:294) ]
+INFO:Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-12-13 22:59:33 下午 [Thread: main][ Class:org.quartz.impl.StdSchedulerFactory >> Method: org.quartz.impl.StdSchedulerFactory.instantiate(StdSchedulerFactory.java:1374) ]
+INFO:Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-12-13 22:59:33 下午 [Thread: main][ Class:org.quartz.impl.StdSchedulerFactory >> Method: org.quartz.impl.StdSchedulerFactory.instantiate(StdSchedulerFactory.java:1378) ]
+INFO:Quartz scheduler version: 2.3.2
+2021-12-13 22:59:33 下午 [Thread: main][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.setJobFactory(QuartzScheduler.java:2293) ]
+INFO:JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@3850e90c
+2021-12-13 22:59:34 下午 [Thread: main][ Class:org.apache.coyote.http11.Http11NioProtocol >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Starting ProtocolHandler ["http-nio-8086"]
+2021-12-13 22:59:34 下午 [Thread: main][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.start(QuartzScheduler.java:547) ]
+INFO:Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-12-13 23:00:32 下午 [Thread: http-nio-8086-exec-1][ Class:org.apache.tomcat.util.http.parser.Cookie >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:A cookie header was received [1619257388] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2021-12-13 23:00:32 下午 [Thread: http-nio-8086-exec-1][ Class:org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-12-13 23:01:02 下午 [Thread: http-nio-8086-exec-1][ Class:com.wang.controller.download.TestController >> Method: com.wang.controller.download.TestController.test1(TestController.java:25) ]
+INFO:path:C:\Users\小王\AppData\Local\Temp\tomcat-docbase.8086.6895875276428338419\resource
+2021-12-13 23:06:31 下午 [Thread: SpringContextShutdownHook][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.standby(QuartzScheduler.java:585) ]
+INFO:Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-12-13 23:06:32 下午 [Thread: SpringContextShutdownHook][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.shutdown(QuartzScheduler.java:666) ]
+INFO:Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2021-12-13 23:06:32 下午 [Thread: SpringContextShutdownHook][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.standby(QuartzScheduler.java:585) ]
+INFO:Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-12-13 23:06:32 下午 [Thread: SpringContextShutdownHook][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.shutdown(QuartzScheduler.java:740) ]
+INFO:Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2021-12-13 23:06:37 下午 [Thread: main][ Class:org.apache.coyote.http11.Http11NioProtocol >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Initializing ProtocolHandler ["http-nio-8086"]
+2021-12-13 23:06:37 下午 [Thread: main][ Class:org.apache.catalina.core.StandardService >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Starting service [Tomcat]
+2021-12-13 23:06:37 下午 [Thread: main][ Class:org.apache.catalina.core.StandardEngine >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Starting Servlet engine: [Apache Tomcat/9.0.39]
+2021-12-13 23:06:37 下午 [Thread: main][ Class:org.apache.catalina.core.AprLifecycleListener >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Loaded Apache Tomcat Native library [1.2.25] using APR version [1.7.0].
+2021-12-13 23:06:37 下午 [Thread: main][ Class:org.apache.catalina.core.AprLifecycleListener >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2021-12-13 23:06:37 下午 [Thread: main][ Class:org.apache.catalina.core.AprLifecycleListener >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021-12-13 23:06:37 下午 [Thread: main][ Class:org.apache.catalina.core.AprLifecycleListener >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+2021-12-13 23:06:37 下午 [Thread: main][ Class:org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Initializing Spring embedded WebApplicationContext
+2021-12-13 23:06:37 下午 [Thread: main][ Class:org.quartz.impl.StdSchedulerFactory >> Method: org.quartz.impl.StdSchedulerFactory.instantiate(StdSchedulerFactory.java:1220) ]
+INFO:Using default implementation for ThreadExecutor
+2021-12-13 23:06:37 下午 [Thread: main][ Class:org.quartz.core.SchedulerSignalerImpl >> Method: org.quartz.core.SchedulerSignalerImpl.<init>(SchedulerSignalerImpl.java:61) ]
+INFO:Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-12-13 23:06:37 下午 [Thread: main][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.<init>(QuartzScheduler.java:229) ]
+INFO:Quartz Scheduler v.2.3.2 created.
+2021-12-13 23:06:37 下午 [Thread: main][ Class:org.quartz.simpl.RAMJobStore >> Method: org.quartz.simpl.RAMJobStore.initialize(RAMJobStore.java:155) ]
+INFO:RAMJobStore initialized.
+2021-12-13 23:06:37 下午 [Thread: main][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.initialize(QuartzScheduler.java:294) ]
+INFO:Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-12-13 23:06:37 下午 [Thread: main][ Class:org.quartz.impl.StdSchedulerFactory >> Method: org.quartz.impl.StdSchedulerFactory.instantiate(StdSchedulerFactory.java:1374) ]
+INFO:Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-12-13 23:06:37 下午 [Thread: main][ Class:org.quartz.impl.StdSchedulerFactory >> Method: org.quartz.impl.StdSchedulerFactory.instantiate(StdSchedulerFactory.java:1378) ]
+INFO:Quartz scheduler version: 2.3.2
+2021-12-13 23:06:37 下午 [Thread: main][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.setJobFactory(QuartzScheduler.java:2293) ]
+INFO:JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@5d3ff859
+2021-12-13 23:06:37 下午 [Thread: main][ Class:org.apache.coyote.http11.Http11NioProtocol >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Starting ProtocolHandler ["http-nio-8086"]
+2021-12-13 23:06:37 下午 [Thread: main][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.start(QuartzScheduler.java:547) ]
+INFO:Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-12-13 23:06:57 下午 [Thread: http-nio-8086-exec-1][ Class:org.apache.tomcat.util.http.parser.Cookie >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:A cookie header was received [1619257388] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2021-12-13 23:06:57 下午 [Thread: http-nio-8086-exec-1][ Class:org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-12-13 23:07:20 下午 [Thread: http-nio-8086-exec-1][ Class:com.wang.controller.download.TestController >> Method: com.wang.controller.download.TestController.test2(TestController.java:38) ]
+INFO:path:D:\Code\ideaCode\MyPlan
+2021-12-13 23:26:54 下午 [Thread: SpringContextShutdownHook][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.standby(QuartzScheduler.java:585) ]
+INFO:Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-12-13 23:26:54 下午 [Thread: SpringContextShutdownHook][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.shutdown(QuartzScheduler.java:666) ]
+INFO:Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2021-12-13 23:26:54 下午 [Thread: SpringContextShutdownHook][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.standby(QuartzScheduler.java:585) ]
+INFO:Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-12-13 23:26:54 下午 [Thread: SpringContextShutdownHook][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.shutdown(QuartzScheduler.java:740) ]
+INFO:Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2021-12-13 23:26:59 下午 [Thread: main][ Class:org.apache.coyote.http11.Http11NioProtocol >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Initializing ProtocolHandler ["http-nio-8086"]
+2021-12-13 23:26:59 下午 [Thread: main][ Class:org.apache.catalina.core.StandardService >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Starting service [Tomcat]
+2021-12-13 23:26:59 下午 [Thread: main][ Class:org.apache.catalina.core.StandardEngine >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Starting Servlet engine: [Apache Tomcat/9.0.39]
+2021-12-13 23:26:59 下午 [Thread: main][ Class:org.apache.catalina.core.AprLifecycleListener >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Loaded Apache Tomcat Native library [1.2.25] using APR version [1.7.0].
+2021-12-13 23:26:59 下午 [Thread: main][ Class:org.apache.catalina.core.AprLifecycleListener >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2021-12-13 23:26:59 下午 [Thread: main][ Class:org.apache.catalina.core.AprLifecycleListener >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021-12-13 23:26:59 下午 [Thread: main][ Class:org.apache.catalina.core.AprLifecycleListener >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+2021-12-13 23:26:59 下午 [Thread: main][ Class:org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Initializing Spring embedded WebApplicationContext
+2021-12-13 23:26:59 下午 [Thread: main][ Class:org.quartz.impl.StdSchedulerFactory >> Method: org.quartz.impl.StdSchedulerFactory.instantiate(StdSchedulerFactory.java:1220) ]
+INFO:Using default implementation for ThreadExecutor
+2021-12-13 23:26:59 下午 [Thread: main][ Class:org.quartz.core.SchedulerSignalerImpl >> Method: org.quartz.core.SchedulerSignalerImpl.<init>(SchedulerSignalerImpl.java:61) ]
+INFO:Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-12-13 23:26:59 下午 [Thread: main][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.<init>(QuartzScheduler.java:229) ]
+INFO:Quartz Scheduler v.2.3.2 created.
+2021-12-13 23:26:59 下午 [Thread: main][ Class:org.quartz.simpl.RAMJobStore >> Method: org.quartz.simpl.RAMJobStore.initialize(RAMJobStore.java:155) ]
+INFO:RAMJobStore initialized.
+2021-12-13 23:26:59 下午 [Thread: main][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.initialize(QuartzScheduler.java:294) ]
+INFO:Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-12-13 23:26:59 下午 [Thread: main][ Class:org.quartz.impl.StdSchedulerFactory >> Method: org.quartz.impl.StdSchedulerFactory.instantiate(StdSchedulerFactory.java:1374) ]
+INFO:Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-12-13 23:26:59 下午 [Thread: main][ Class:org.quartz.impl.StdSchedulerFactory >> Method: org.quartz.impl.StdSchedulerFactory.instantiate(StdSchedulerFactory.java:1378) ]
+INFO:Quartz scheduler version: 2.3.2
+2021-12-13 23:26:59 下午 [Thread: main][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.setJobFactory(QuartzScheduler.java:2293) ]
+INFO:JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@62c72501
+2021-12-13 23:27:00 下午 [Thread: main][ Class:org.apache.coyote.http11.Http11NioProtocol >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Starting ProtocolHandler ["http-nio-8086"]
+2021-12-13 23:27:00 下午 [Thread: main][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.start(QuartzScheduler.java:547) ]
+INFO:Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-12-13 23:27:13 下午 [Thread: http-nio-8086-exec-1][ Class:org.apache.tomcat.util.http.parser.Cookie >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:A cookie header was received [1619257388] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2021-12-13 23:27:13 下午 [Thread: http-nio-8086-exec-1][ Class:org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-12-13 23:27:20 下午 [Thread: http-nio-8086-exec-1][ Class:com.wang.controller.download.TestController >> Method: com.wang.controller.download.TestController.test2(TestController.java:40) ]
+INFO:path:D:\Code\ideaCode\MyPlan
+2021-12-13 23:27:42 下午 [Thread: http-nio-8086-exec-2][ Class:com.wang.controller.download.TestController >> Method: com.wang.controller.download.TestController.test3(TestController.java:52) ]
+INFO:path:/D:/Code/ideaCode/MyPlan/Aop/target/classes/
+2021-12-13 23:33:20 下午 [Thread: SpringContextShutdownHook][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.standby(QuartzScheduler.java:585) ]
+INFO:Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-12-13 23:33:20 下午 [Thread: SpringContextShutdownHook][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.shutdown(QuartzScheduler.java:666) ]
+INFO:Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2021-12-13 23:33:20 下午 [Thread: SpringContextShutdownHook][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.standby(QuartzScheduler.java:585) ]
+INFO:Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-12-13 23:33:20 下午 [Thread: SpringContextShutdownHook][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.shutdown(QuartzScheduler.java:740) ]
+INFO:Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2021-12-13 23:33:26 下午 [Thread: main][ Class:org.apache.coyote.http11.Http11NioProtocol >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Initializing ProtocolHandler ["http-nio-8086"]
+2021-12-13 23:33:26 下午 [Thread: main][ Class:org.apache.catalina.core.StandardService >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Starting service [Tomcat]
+2021-12-13 23:33:26 下午 [Thread: main][ Class:org.apache.catalina.core.StandardEngine >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Starting Servlet engine: [Apache Tomcat/9.0.39]
+2021-12-13 23:33:26 下午 [Thread: main][ Class:org.apache.catalina.core.AprLifecycleListener >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Loaded Apache Tomcat Native library [1.2.25] using APR version [1.7.0].
+2021-12-13 23:33:26 下午 [Thread: main][ Class:org.apache.catalina.core.AprLifecycleListener >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2021-12-13 23:33:26 下午 [Thread: main][ Class:org.apache.catalina.core.AprLifecycleListener >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021-12-13 23:33:26 下午 [Thread: main][ Class:org.apache.catalina.core.AprLifecycleListener >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+2021-12-13 23:33:26 下午 [Thread: main][ Class:org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Initializing Spring embedded WebApplicationContext
+2021-12-13 23:33:27 下午 [Thread: main][ Class:org.quartz.impl.StdSchedulerFactory >> Method: org.quartz.impl.StdSchedulerFactory.instantiate(StdSchedulerFactory.java:1220) ]
+INFO:Using default implementation for ThreadExecutor
+2021-12-13 23:33:27 下午 [Thread: main][ Class:org.quartz.core.SchedulerSignalerImpl >> Method: org.quartz.core.SchedulerSignalerImpl.<init>(SchedulerSignalerImpl.java:61) ]
+INFO:Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-12-13 23:33:27 下午 [Thread: main][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.<init>(QuartzScheduler.java:229) ]
+INFO:Quartz Scheduler v.2.3.2 created.
+2021-12-13 23:33:27 下午 [Thread: main][ Class:org.quartz.simpl.RAMJobStore >> Method: org.quartz.simpl.RAMJobStore.initialize(RAMJobStore.java:155) ]
+INFO:RAMJobStore initialized.
+2021-12-13 23:33:27 下午 [Thread: main][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.initialize(QuartzScheduler.java:294) ]
+INFO:Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-12-13 23:33:27 下午 [Thread: main][ Class:org.quartz.impl.StdSchedulerFactory >> Method: org.quartz.impl.StdSchedulerFactory.instantiate(StdSchedulerFactory.java:1374) ]
+INFO:Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-12-13 23:33:27 下午 [Thread: main][ Class:org.quartz.impl.StdSchedulerFactory >> Method: org.quartz.impl.StdSchedulerFactory.instantiate(StdSchedulerFactory.java:1378) ]
+INFO:Quartz scheduler version: 2.3.2
+2021-12-13 23:33:27 下午 [Thread: main][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.setJobFactory(QuartzScheduler.java:2293) ]
+INFO:JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@23ed382c
+2021-12-13 23:33:27 下午 [Thread: main][ Class:org.apache.coyote.http11.Http11NioProtocol >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Starting ProtocolHandler ["http-nio-8086"]
+2021-12-13 23:33:27 下午 [Thread: main][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.start(QuartzScheduler.java:547) ]
+INFO:Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-12-13 23:33:37 下午 [Thread: http-nio-8086-exec-1][ Class:org.apache.tomcat.util.http.parser.Cookie >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:A cookie header was received [1619257388] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2021-12-13 23:33:37 下午 [Thread: http-nio-8086-exec-1][ Class:org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-12-13 23:33:57 下午 [Thread: http-nio-8086-exec-1][ Class:com.wang.controller.download.TestController >> Method: com.wang.controller.download.TestController.test4(TestController.java:64) ]
+INFO:path:/D:/Code/ideaCode/MyPlan/Aop/target/classes/
+2021-12-13 23:34:06 下午 [Thread: SpringContextShutdownHook][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.standby(QuartzScheduler.java:585) ]
+INFO:Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-12-13 23:34:06 下午 [Thread: SpringContextShutdownHook][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.shutdown(QuartzScheduler.java:666) ]
+INFO:Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2021-12-13 23:34:06 下午 [Thread: SpringContextShutdownHook][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.standby(QuartzScheduler.java:585) ]
+INFO:Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-12-13 23:34:06 下午 [Thread: SpringContextShutdownHook][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.shutdown(QuartzScheduler.java:740) ]
+INFO:Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2021-12-13 23:43:02 下午 [Thread: main][ Class:org.apache.coyote.http11.Http11NioProtocol >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Initializing ProtocolHandler ["http-nio-8086"]
+2021-12-13 23:43:02 下午 [Thread: main][ Class:org.apache.catalina.core.StandardService >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Starting service [Tomcat]
+2021-12-13 23:43:02 下午 [Thread: main][ Class:org.apache.catalina.core.StandardEngine >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Starting Servlet engine: [Apache Tomcat/9.0.39]
+2021-12-13 23:43:02 下午 [Thread: main][ Class:org.apache.catalina.core.AprLifecycleListener >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Loaded Apache Tomcat Native library [1.2.25] using APR version [1.7.0].
+2021-12-13 23:43:02 下午 [Thread: main][ Class:org.apache.catalina.core.AprLifecycleListener >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2021-12-13 23:43:02 下午 [Thread: main][ Class:org.apache.catalina.core.AprLifecycleListener >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021-12-13 23:43:02 下午 [Thread: main][ Class:org.apache.catalina.core.AprLifecycleListener >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+2021-12-13 23:43:03 下午 [Thread: main][ Class:org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Initializing Spring embedded WebApplicationContext
+2021-12-13 23:43:03 下午 [Thread: main][ Class:org.quartz.impl.StdSchedulerFactory >> Method: org.quartz.impl.StdSchedulerFactory.instantiate(StdSchedulerFactory.java:1220) ]
+INFO:Using default implementation for ThreadExecutor
+2021-12-13 23:43:03 下午 [Thread: main][ Class:org.quartz.core.SchedulerSignalerImpl >> Method: org.quartz.core.SchedulerSignalerImpl.<init>(SchedulerSignalerImpl.java:61) ]
+INFO:Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-12-13 23:43:03 下午 [Thread: main][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.<init>(QuartzScheduler.java:229) ]
+INFO:Quartz Scheduler v.2.3.2 created.
+2021-12-13 23:43:03 下午 [Thread: main][ Class:org.quartz.simpl.RAMJobStore >> Method: org.quartz.simpl.RAMJobStore.initialize(RAMJobStore.java:155) ]
+INFO:RAMJobStore initialized.
+2021-12-13 23:43:03 下午 [Thread: main][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.initialize(QuartzScheduler.java:294) ]
+INFO:Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-12-13 23:43:03 下午 [Thread: main][ Class:org.quartz.impl.StdSchedulerFactory >> Method: org.quartz.impl.StdSchedulerFactory.instantiate(StdSchedulerFactory.java:1374) ]
+INFO:Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-12-13 23:43:03 下午 [Thread: main][ Class:org.quartz.impl.StdSchedulerFactory >> Method: org.quartz.impl.StdSchedulerFactory.instantiate(StdSchedulerFactory.java:1378) ]
+INFO:Quartz scheduler version: 2.3.2
+2021-12-13 23:43:03 下午 [Thread: main][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.setJobFactory(QuartzScheduler.java:2293) ]
+INFO:JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@41fa769c
+2021-12-13 23:43:03 下午 [Thread: main][ Class:org.apache.coyote.http11.Http11NioProtocol >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Starting ProtocolHandler ["http-nio-8086"]
+2021-12-13 23:43:03 下午 [Thread: main][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.start(QuartzScheduler.java:547) ]
+INFO:Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-12-13 23:43:03 下午 [Thread: http-nio-8086-exec-1][ Class:org.apache.tomcat.util.http.parser.Cookie >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:A cookie header was received [1619257388] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2021-12-13 23:43:03 下午 [Thread: http-nio-8086-exec-1][ Class:org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-12-13 23:43:36 下午 [Thread: http-nio-8086-exec-1][ Class:com.wang.controller.download.TestController >> Method: com.wang.controller.download.TestController.test4(TestController.java:64) ]
+INFO:path:/D:/Code/ideaCode/MyPlan/Aop/target/classes/
+2021-12-13 23:44:21 下午 [Thread: SpringContextShutdownHook][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.standby(QuartzScheduler.java:585) ]
+INFO:Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-12-13 23:44:21 下午 [Thread: SpringContextShutdownHook][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.shutdown(QuartzScheduler.java:666) ]
+INFO:Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2021-12-13 23:44:21 下午 [Thread: SpringContextShutdownHook][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.standby(QuartzScheduler.java:585) ]
+INFO:Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2021-12-13 23:44:21 下午 [Thread: SpringContextShutdownHook][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.shutdown(QuartzScheduler.java:740) ]
+INFO:Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2021-12-13 23:44:26 下午 [Thread: main][ Class:org.apache.coyote.http11.Http11NioProtocol >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Initializing ProtocolHandler ["http-nio-8086"]
+2021-12-13 23:44:26 下午 [Thread: main][ Class:org.apache.catalina.core.StandardService >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Starting service [Tomcat]
+2021-12-13 23:44:26 下午 [Thread: main][ Class:org.apache.catalina.core.StandardEngine >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Starting Servlet engine: [Apache Tomcat/9.0.39]
+2021-12-13 23:44:26 下午 [Thread: main][ Class:org.apache.catalina.core.AprLifecycleListener >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Loaded Apache Tomcat Native library [1.2.25] using APR version [1.7.0].
+2021-12-13 23:44:26 下午 [Thread: main][ Class:org.apache.catalina.core.AprLifecycleListener >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2021-12-13 23:44:26 下午 [Thread: main][ Class:org.apache.catalina.core.AprLifecycleListener >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021-12-13 23:44:26 下午 [Thread: main][ Class:org.apache.catalina.core.AprLifecycleListener >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:OpenSSL successfully initialized [OpenSSL 1.1.1g  21 Apr 2020]
+2021-12-13 23:44:27 下午 [Thread: main][ Class:org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Initializing Spring embedded WebApplicationContext
+2021-12-13 23:44:27 下午 [Thread: main][ Class:org.quartz.impl.StdSchedulerFactory >> Method: org.quartz.impl.StdSchedulerFactory.instantiate(StdSchedulerFactory.java:1220) ]
+INFO:Using default implementation for ThreadExecutor
+2021-12-13 23:44:27 下午 [Thread: main][ Class:org.quartz.core.SchedulerSignalerImpl >> Method: org.quartz.core.SchedulerSignalerImpl.<init>(SchedulerSignalerImpl.java:61) ]
+INFO:Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2021-12-13 23:44:27 下午 [Thread: main][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.<init>(QuartzScheduler.java:229) ]
+INFO:Quartz Scheduler v.2.3.2 created.
+2021-12-13 23:44:27 下午 [Thread: main][ Class:org.quartz.simpl.RAMJobStore >> Method: org.quartz.simpl.RAMJobStore.initialize(RAMJobStore.java:155) ]
+INFO:RAMJobStore initialized.
+2021-12-13 23:44:27 下午 [Thread: main][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.initialize(QuartzScheduler.java:294) ]
+INFO:Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-12-13 23:44:27 下午 [Thread: main][ Class:org.quartz.impl.StdSchedulerFactory >> Method: org.quartz.impl.StdSchedulerFactory.instantiate(StdSchedulerFactory.java:1374) ]
+INFO:Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2021-12-13 23:44:27 下午 [Thread: main][ Class:org.quartz.impl.StdSchedulerFactory >> Method: org.quartz.impl.StdSchedulerFactory.instantiate(StdSchedulerFactory.java:1378) ]
+INFO:Quartz scheduler version: 2.3.2
+2021-12-13 23:44:27 下午 [Thread: main][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.setJobFactory(QuartzScheduler.java:2293) ]
+INFO:JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@405b6d75
+2021-12-13 23:44:27 下午 [Thread: main][ Class:org.apache.coyote.http11.Http11NioProtocol >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Starting ProtocolHandler ["http-nio-8086"]
+2021-12-13 23:44:27 下午 [Thread: main][ Class:org.quartz.core.QuartzScheduler >> Method: org.quartz.core.QuartzScheduler.start(QuartzScheduler.java:547) ]
+INFO:Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2021-12-13 23:44:32 下午 [Thread: http-nio-8086-exec-1][ Class:org.apache.tomcat.util.http.parser.Cookie >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:A cookie header was received [1619257388] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2021-12-13 23:44:32 下午 [Thread: http-nio-8086-exec-1][ Class:org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] >> Method: org.apache.juli.logging.DirectJDKLog.log(DirectJDKLog.java:173) ]
+INFO:Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-12-13 23:44:39 下午 [Thread: http-nio-8086-exec-1][ Class:com.wang.controller.download.TestController >> Method: com.wang.controller.download.TestController.test4(TestController.java:64) ]
+INFO:path:/D:/Code/ideaCode/MyPlan/Aop/target/classes/resource
