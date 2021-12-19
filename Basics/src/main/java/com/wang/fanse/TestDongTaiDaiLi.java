@@ -1,6 +1,5 @@
 package com.wang.fanse;
 
-import javax.xml.transform.Source;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
@@ -11,11 +10,9 @@ import java.lang.reflect.Proxy;
  **/
 public class TestDongTaiDaiLi {
     public static void main(String[] args) throws Exception {
-        Class<Cat> catClass=Cat.class;
         Class<Dog> dogClass=Dog.class;
 
-        Cat cat = catClass.newInstance();
-        Work c = (Work) Proxy.newProxyInstance(dogClass.getClassLoader(), dogClass.getInterfaces(), new InvocationHandler() {
+        Walk c = (Walk) Proxy.newProxyInstance(dogClass.getClassLoader(), dogClass.getInterfaces(), new InvocationHandler() {
             @Override
             public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
                 System.out.println("添油加醋");
@@ -26,7 +23,7 @@ public class TestDongTaiDaiLi {
             }
         });
 
-        System.out.println("返回值："+c.work("hhhhh"));
+        System.out.println("返回值："+c.walk("hhhhh"));
     }
     }
 

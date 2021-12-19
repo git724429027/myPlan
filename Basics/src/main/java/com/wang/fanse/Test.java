@@ -1,6 +1,7 @@
 package com.wang.fanse;
 
 import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.lang.reflect.Parameter;
 
@@ -51,6 +52,14 @@ public class Test {
             for (Parameter parameter : parameters) {
                 System.out.println(declaredMethod.getName()+":"+parameter.getName()+":"+parameter.getType());
             }
+        }
+        //执行private的方法
+        try {
+            Method say = aClass.getDeclaredMethod("say", String.class);
+            say.setAccessible(true);
+            say.invoke(aClass.newInstance(),"哈哈哈");
+        } catch (NoSuchMethodException | IllegalAccessException | InstantiationException | InvocationTargetException e) {
+            e.printStackTrace();
         }
     }
 }
